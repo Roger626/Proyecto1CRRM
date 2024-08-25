@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Planilla</title>
+</head>
+<body>
+    <h1>Planilla 2024</h1>
+    
+    <div class="cedula">
+        
+        <Select class="tomo">
+            <option value="" disabled selected>Seleccione el tomo </option>
+        </Select>
+        <input type="text" id="folio" placeholder="#####"> 
+        <input type="text"  id="asiento" placeholder="######">   
+        
+    </div>
+    
+    <div class="datos">
+        <label class="nombre" for="nombre">Nombre completo</label>
+        <input class="nombre" type="text" id="Nombre" placeholder="Ingrese aqui su nombre" oninput="validarSoloLetras(this)">
+        <p id="msgError" style="color: red; display: none;">Solo se permiten letras.</p>
+        
+        <label class="apellido" for="apellido">Apellido completo</label>
+        <input class="apellido" type="text" id="apellido" placeholder="Ingrese aqui su apellido">
+        
+        <select class="provincia" id="provincia">
+            <option value="" disabled selected>Seleccione la provincia</option>
+        </select>
+        
+        <select class="distrito" id="distrito">
+            <option value="" disabled selected>Seleccione el distrito</option>
+        </select>
+        
+        <select class="corregimiento" id="corregimiento">
+            <option value="" disabled selected>Seleccione el corregimiento</option>
+        </select>
+    </div>
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
