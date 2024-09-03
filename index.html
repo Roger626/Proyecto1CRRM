@@ -12,20 +12,20 @@
     <div class="cedula">
         
         <Select class="tomo">
-            <option value="" disabled selected>Seleccione el tomo </option>
+            <option value="" id="tomo" disabled selected>Seleccione el tomo </option>
         </Select>
-        <input type="text" id="folio" placeholder="#####"> 
-        <input type="text"  id="asiento" placeholder="######">   
+        <input type="text" id="folio" minlength="1" maxlength="4" placeholder="#####" oninput="soloNumeros(this)"> 
+        <input type="text"  id="asiento" minlength="1" maxlength="5" placeholder="######" oninput="soloNumeros(this)">   
         
     </div>
     
     <div class="datos">
         <label class="nombre" for="nombre">Nombre completo</label>
-        <input class="nombre" type="text" id="Nombre" placeholder="Ingrese aqui su nombre" oninput="validarSoloLetras(this)">
-        <p id="msgError" style="color: red; display: none;">Solo se permiten letras.</p>
+        <input class="nombre" type="text" id="Nombre" onkeyup="soloLetras(this)" placeholder="Ingrese aqui su nombre" >
+        <p id="msgError" style="color: red; display: none;">SOLO LETRAS CTM.</p>
         
         <label class="apellido" for="apellido">Apellido completo</label>
-        <input class="apellido" type="text" id="apellido" placeholder="Ingrese aqui su apellido">
+        <input class="apellido" type="text" id="apellido" onkeyup="soloLetras(this)" placeholder="Ingrese aqui su apellido">
         
         <select class="provincia" id="provincia">
             <option value="" disabled selected>Seleccione la provincia</option>
@@ -40,9 +40,17 @@
         </select>
     </div>
 
+    <div>
+        <label for="Sueldo">Sueldo</label>
+        <input type="text" id="sueldo" onkeyup="impuestoRenta(this)">
+
+        <label for="Impuesto">Impuesto</label>
+        <input type="number">
+    </div>
+
+    <script src="app.js"></script>
 
     <script src="bd.php"></script>
     <script src="get_datos.js"></script>
-    
 </body>
 </html>
