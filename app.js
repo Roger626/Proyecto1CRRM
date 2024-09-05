@@ -14,3 +14,5 @@ function validarSoloLetras(input) {
         document.getElementById("msgError").style.display = "none";
     }
 }
+
+
