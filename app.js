@@ -27,17 +27,17 @@ $(function() {
         const seguroEducativo = parseFloat(i.toFixed(2));
         document.getElementById("sEducativo").value = seguroEducativo;
         
-        var iR = sBruto *12 ;
-        let impuestoRenta = 0; // Declarar impuestoRenta fuera del ámbito de los bloques if/else if
+        var sAnual = sBruto *13 ;
+        let impuestoRenta = 0; 
         
         if(iR > 50000){
-            var i = iR * 0.25;
+            var i = ((50000 - 11000) * 0.15 ) + ((sAnual - 50000) * 0.25);
             const impuestoRenta = parseFloat(i.toFixed(2));
             var mensual = impuestoRenta / 12;
             document.getElementById("iRenta").value = mensual.toFixed(2);
             console.log("Paga 25%");
         } else{
-            var i = iR * 0.15;
+            var i = (sAnual - 11000) * 0.15;
             var mensual = impuestoRenta / 12;
             document.getElementById("iRenta").value = mensual.toFixed(2);
             console.log("Paga 15%");
