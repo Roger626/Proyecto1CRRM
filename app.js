@@ -13,9 +13,6 @@ $(function() {
 
     });
 
-
-
-
     function calcularSalarioNeto(){
         var sBruto = document.getElementById("sBruto").value;
     
